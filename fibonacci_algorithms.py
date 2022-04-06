@@ -1,3 +1,4 @@
+# Without dynamic programing applications
 def fibonacci(n):
     '''Assumes n > 1 as int,
     returns fibonnaci equivalent of n.'''    
@@ -5,7 +6,6 @@ def fibonacci(n):
         return 1
     else:
         return fibonacci(n-1) + fibonacci(n-2)
-    
 
 # According to memoization method (topdown)
 def fib_memo(n, memo = {}):
