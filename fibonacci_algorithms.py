@@ -1,4 +1,4 @@
-# Without dynamic programing applications
+# Without dynamic programming applications
 def fibonacci(n):
     """Assumes n > 1 as int,
     returns fibonnaci equivalent of n."""    
