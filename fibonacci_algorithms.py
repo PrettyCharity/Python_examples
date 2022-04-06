@@ -22,7 +22,6 @@ def fib_memo(n, memo = {}):
         return result
 
 #According to tabular method (bottom - up)
-
 def fib_tab(n):
     """Assumes n is an int >= 0
        Returns Fibonacci of n"""
