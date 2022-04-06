@@ -1,7 +1,7 @@
 # Without dynamic programing applications
 def fibonacci(n):
-    '''Assumes n > 1 as int,
-    returns fibonnaci equivalent of n.'''    
+    """Assumes n > 1 as int,
+    returns fibonnaci equivalent of n."""    
     if n == 0 or n == 1:
         return 1
     else:
@@ -11,7 +11,7 @@ def fibonacci(n):
 def fib_memo(n, memo = {}):
     """Assumes n is an int >= 0,
         memo used only by recursive calls
-        Return Fibonacci of n"""
+        Return Fibonacci of n."""
     if n == 0 or n == 1:
         return 1
     try:
@@ -24,7 +24,7 @@ def fib_memo(n, memo = {}):
 #According to tabular method (bottom - up)
 def fib_tab(n):
     """Assumes n is an int >= 0
-       Returns Fibonacci of n"""
+       Returns Fibonacci of n."""
     tab = [1]*(n+1) # only first two values matter
     for i in range(2, n + 1):
         tab[i] =tab[i-1] + tab[i-2]
