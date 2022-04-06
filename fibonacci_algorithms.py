@@ -27,5 +27,5 @@ def fib_tab(n):
        Returns Fibonacci of n."""
     tab = [1]*(n+1) # only first two values matter
     for i in range(2, n + 1):
-        tab[i] =tab[i-1] + tab[i-2]
+        tab[i] = tab[i-1] + tab[i-2]
     return tab[n]
