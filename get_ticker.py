@@ -1,0 +1,31 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Mon Apr 11 10:30:33 2022
+
+@author: ersoy
+"""
+import pandas as pd
+import datetime as dt
+
+# Adapted from https://github.com/jupyter-naas/drivers/blob/main/naas_drivers/tools/yahoofinance.py
+def get_ticker(ticker: str):
+    """
+    Takes the ticker (a string) from Yahoo Finance,
+    Adjusts interval to daily, 
+    date_from to 1994,
+    date_to to today.
+    Returns a pandas dataframe with finance stock data 
+    """
+    ticker = ticker
+    interval = "1d"
+    date_from = dt.datetime.today() + dt.timedelta(days=-10000)
+    date_to = dt.datetime.today()
+    period1 = int(date_from.timestamp())
+    period2 = int(date_to.timestamp())
+    url = (
+            f"https://query1.finance.yahoo.com/v7/finance/download/"
+            f"{ticker[0]}?period1={period1}&period2={period2}&interval={interval}&events=history"
+          )
+    df = pd.read_csv(url)
+    return df
+    
