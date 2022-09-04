@@ -1,3 +1,4 @@
+# Developed by Prof. Eric Grimson during MIT 6.000.1 course
 # Without dynamic programming applications
 def fibonacci(n):
     """Assumes n > 1 as int,
